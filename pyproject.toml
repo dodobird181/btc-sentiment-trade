@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "btc-sentiment-trade"
+version = "0.1.0"
+description = "A Bitcoin Sentiment Analysis Trading Bot"
+authors = ["Samuel Morris <53889741+dodobird181@users.noreply.github.com>"]
+license = "MIT License"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
