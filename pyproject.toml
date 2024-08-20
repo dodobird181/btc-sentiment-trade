@@ -8,6 +8,7 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.10"
+blankly = "^1.18.25b0"
 
 
 [build-system]
