@@ -11,6 +11,7 @@ python = "^3.11"
 matplotlib = "^3.9.2"
 alpha-vantage = "^3.0.0"
 pandas = "^2.2.2"
+yfinance = "^0.2.43"
 
 [tool.poetry.dev-dependencies]
 pytest = "^7.0.0"
