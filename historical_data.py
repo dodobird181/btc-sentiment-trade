@@ -1,6 +1,7 @@
 import pandas as pd
 import datetime as dt
 import yfinance as yf
+from typing import *
 
 
 class FetchHistoricalDataError(Exception):
@@ -23,18 +24,24 @@ class RangeUnavailable(FetchHistoricalDataError):
     ...
 
 
-def fetch_historical_data(
+def download_historical_data(
     symbol: str,
     resolution: dt.timedelta,
     start_dt: dt.datetime,
     end_dt: dt.datetime,
+    save_dir: str | None,
+    **kwargs: Dict[str, Any],
 ) -> pd.DataFrame:
     """
+    Download historical market data from the internet.
+
+    `start_date`:
     Fetch historical stock market data of a given resolution from `start_dt`
     to `end_dt`, and return the data as a pandas `DataFrame` with the following
     columns: ["time", "low", "high", "open", "close", "volume"]. Raise a
     `FetchHistoricalDataError` if something went wrong while fetching the data.
     """
+
     data = yf.download(symbol, interval=resolution, start=start_dt, end=end_dt,)
     return data
 
